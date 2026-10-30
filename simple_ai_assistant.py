@@ -41,7 +41,7 @@ while True:
 
     msg = response.choices[0].message
 
-    if msg.tool_calls:
+    while True:
         messages.append(msg)
 
         for tool_call in msg.tool_calls:
